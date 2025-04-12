@@ -37,8 +37,7 @@ cp ./data/raw/*event*.log ./data/processed/event_logs/
 rm -f data/raw/*ipaddr*
 rm -f data/processed/user_logs/*ipaddr*
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
-touch data/inventory.txt
-
+find data/processed -type f > data/inventory.txt
 ###########################################
 
 echo "Project setup is complete!"
